@@ -1,0 +1,21 @@
+criar um projeto novo springframork
+https://start.spring.io/
+project Maven
+Language
+Java
+spring boot
+considerar a sugerida
+projetct metadata
+group br.com.cotiinformatica
+artifact api-clientes
+package name 
+ele preenche
+packaging Jar
+configuration Properties
+Java 21 (aceitar a sugerida)
+dependencies (clicar nas dependencias)
+projeto novo sempre coloca as seguintes dependências
+spring web
+spring boot devtools
+lombok
+postgresql driver (ou outro driver compativel com banco vai usar)
