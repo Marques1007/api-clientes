@@ -1,4 +1,5 @@
-criar um projeto novo springframork
+criar um projeto novo springframork desde o inicio:
+
 https://start.spring.io/
 project Maven
 Language
@@ -19,3 +20,85 @@ spring web
 spring boot devtools
 lombok
 postgresql driver (ou outro driver compativel com banco vai usar)
+clicando generated vai gerar um zip
+
+abrir no intellig
+entrar na pasta do projeto onde tem todas as pastas
+selected folder
+this windows (para ficar só esse projeto)
+
+o recomendado é já criar o repositorio no github
+https://github.com/new
+repository name api-clientes (mesmo nome do intellig)
+description projeto spring boot para api de clientes
+clicar em create repository
+
+jogar o projeto do intellig para o github
+acessar o terminal
+git init
+git branch -m main
+git add .
+git commit -m 'versão inicial'
+pegar o comando abaixo no github '...or create a new repository...'
+git remote add origin https://github.com/Marques1007/api-clientes.git
+git push origin main
+verificar lá no github pra ver se subiu
+
+todo projeot é executado na classe
+apiClientesApplication (bd) run aplication
+criar as 8 package que normalmente se usa nos projetostudo minusculas
+configurarions
+controllers
+dtos
+entities
+factories
+repositories
+services
+sql
+para renomear uma package (bd) refactor e refactor
+começa a criar as classes inicio Maiuscula
+(bd) entities
+	Cliente
+	Endereco
+entrar em Cliente
+@setter (trouxe do lombok)
+@getter
+e os campos
+entrar em Endereco
+@setter (trouxe do lombok)
+@getter
+e os campos
+
+entrar em sql para criar o script do banco de dados
+(bd) new/file schema.sql 
+pode clicar em dismiss (mensagem em vermelho)
+entrar no pgadmin para 
+criar o banco bd-api-clientes
+copiar o schema.sql
+rodar o schema query tools
+
+entrar na factories e criar a classe 
+ConnectionFactory
+pra ver a porta pgadmin 17 (bd) properties connection
+entrar em Reposotires e criar a classe
+ClienteRepository
+entrar na services e criar a classe
+ClienteService
+entrar em controllers e criar a classe
+ClienteController
+
+testar pelo postman
+https://www.postman.com/downloads/
+baixar e executar o postman (x64) 
+depois fazemos
+
+testar pelo swegger
+entrar no pom.xml
+copiar a dependencia no maven mas fez aqui mesmo no curso
+colar no pom.xml antes de dependicias
+clicar no mosquitinho vermelho do lado direito e clicar
+nos 2 executores a esquerda no cabeçalho sync reloaded + 1
+
+
+
+
