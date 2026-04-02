@@ -98,7 +98,46 @@ copiar a dependencia no maven mas fez aqui mesmo no curso
 colar no pom.xml antes de dependicias
 clicar no mosquitinho vermelho do lado direito e clicar
 nos 2 executores a esquerda no cabeçalho sync reloaded + 1
+no aplication property pode trocar a porta do swegger para 8081 8082 etc
+o padrao é 8080
 
+salvar no git
+git add .
+git commit -m 'cadastro de cliente na API'
+git push origin main
 
+-----------------------------------------------------
+01/04/2026
 
+executamos a API no intellig
+swegger 8080 para testar pelo front
+abrir o projeto no angular
+entrar na pasta angular/web-clientes
+(bd) git bash here
+npm install
+code .
+ng s -o
+criou no dto javaclass com record ClienteRequest
+public record ClienteRequest(
 
+        String nome,
+        String cpf
+
+) {
+}
+
+na ClienteService
+mudou para 
+public void cadastrarCliente(ClienteRequest request) throws Exception
+nome
+mudou para
+request.nome()
+
+clientecontroller
+estava
+    public String criar(@RequestParam ......
+mudou para
+    public String criar(@RequestBody ClienteRequest request) {
+
+mudar para
+    public ResponseEntity<String> criar(@RequestBody ClienteRequest request) {
