@@ -12,7 +12,7 @@ public class ClienteController {
     HTTP POST / API/CLiente/criar
     Operação ===> para cadastrar um cliente
      */
-    @PostMapping("Criar")
+    @PostMapping("criar")
     public ResponseEntity<String> criar(@RequestBody ClienteRequest request) {
 
         try {
