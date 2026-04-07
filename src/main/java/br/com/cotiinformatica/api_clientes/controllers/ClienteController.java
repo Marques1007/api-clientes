@@ -2,12 +2,17 @@ package br.com.cotiinformatica.api_clientes.controllers;
 
 import br.com.cotiinformatica.api_clientes.dtos.ClienteRequest;
 import br.com.cotiinformatica.api_clientes.services.ClienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController //essa classe é um controlador de API
 @RequestMapping ("/api/cliente")
 public class ClienteController {
+
+    @Autowired
+    private ClienteService clienteService;
+
     /*
     HTTP POST / API/CLiente/criar
     Operação ===> para cadastrar um cliente
@@ -17,7 +22,8 @@ public class ClienteController {
 
         try {
 
-            var clienteService = new ClienteService();
+// depois que criou a autowired
+            //            var clienteService = new ClienteService();
             clienteService.cadastrarCliente(request);
 
             return ResponseEntity.status(201).body ("CLiente " + request.nome() + ", cadastrado com sucesso!");
@@ -32,7 +38,7 @@ public class ClienteController {
         catch (Exception e) {
             //HTTP 500 internal server error
             return ResponseEntity.status(500).body(e.getMessage());
-        }
+          }
     }
 
     /*
@@ -43,7 +49,7 @@ public class ClienteController {
     //?=esse endpoint pode retornar qualquer coisa, no caso mensagem e lista
     public ResponseEntity<?> consultar(@RequestParam String nome) {
         try {
-            var clienteService = new ClienteService();
+//            var clienteService = new ClienteService();
             var lista = clienteService.pesquisarClientes(nome);
 
             //HTTP 200 - OK

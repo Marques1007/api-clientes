@@ -141,3 +141,26 @@ mudou para
 
 mudar para
     public ResponseEntity<String> criar(@RequestBody ClienteRequest request) {
+
+git add .
+git commit -m 'API....'
+git push origin main
+
+acertamos o request lá no frontend para receber jason
+  //capturando os dados do formulário
+    const request = { //JSON
+      nome:  this.formulario.value.nome!, //capturando o campo nome do formulário
+      cpf: this.formulario.value.cpf!  //capturando o campo cpf do formulário
+    }
+
+----------------------------------------------------
+06/04/2026
+
+transferiu informaçoes de acesso ao banco para o arquivo
+application.properties retirando do connnectionfactory e corsconfiguration
+fez as anotacções
+estereotipou 
+@service
+@repository
+@Component
+
