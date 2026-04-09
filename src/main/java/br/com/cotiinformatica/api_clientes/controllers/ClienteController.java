@@ -64,5 +64,26 @@ public class ClienteController {
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
-}
+    /*
+       HTTP DELETE /api/cliente/excluir/{id}
+       Operação na API para excluir o cliente
+    */
+    @DeleteMapping("excluir/{id}")
+    public ResponseEntity<String> delete(@PathVariable Integer id) {
+        try {
+            clienteService.excluirCliente(id);
+            //HTTP 200 - OK
+            return ResponseEntity.status(200).body("Cliente excluído com sucesso.");
+        }
+        catch (IllegalArgumentException e) {
+            //HTTP 400 - BAD REQUEST
+            return ResponseEntity.status(400).body(e.getMessage());
+        }
+        catch(Exception e){
+            //HTTP 500 - INTERNAL SERVER ERROR
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
 
+
+}

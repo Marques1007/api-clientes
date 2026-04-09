@@ -164,3 +164,48 @@ estereotipou
 @repository
 @Component
 
+left so tem na primeira tabela
+inner tem q ter nos dois
+right ?
+ILIKE - ignora maiuscula ou minuscula
+
+
+terminal
+git add .
+git commit -m 'configuracoes externas ao projeto e cadastro de enderecos'
+git push origin main
+------------------------------------------------------
+08/04/2026
+
+postman
+clicar na casinha
+do lado workspace
+create
+blank workspace
+next
+nome da workspace Java Webdeveloper - SQ Noite 2026
+create
+collection create
+new collection
+acima do overviews
+apgar new collection e colocar o nome
+API Clientes
+add request
+api clientes > ..... muda esse nome para Cadastrar clientes
+post
+http://localhost:8081/api/cliente/criar
+copiar o json lá do sweger
+body
+raw
+json
+e colar o json aqui
+save
+criar outros testes
+add request
+quando tiver parametros clica em param
+e passa o nome do parametro
+key 
+nome do campo
+value 
+o valor que vai levar nesse campo para a query
+ 
